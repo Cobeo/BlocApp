@@ -50,3 +50,8 @@
 /BlocApp/BlocApp/BlocApp/bin/Debug/netstandard2.0/BlocApp.pdb
 /BlocApp/BlocApp/BlocApp/bin/Debug/netstandard2.0/BlocApp.dll.mdb
 /BlocApp/BlocApp/BlocApp/bin/Debug/netstandard2.0
+/BlocApp/BlocApp/BlocApp.iOS/bin/iPhoneSimulator/Debug
+/BlocApp/BlocApp/BlocApp.Android/obj/Debug/90/upload.flag
+/BlocApp/BlocApp/BlocApp.Android/obj/Debug/90/R38M40E1YYD.deployment
+/BlocApp/BlocApp/BlocApp.Android/obj/Debug/90/android_debug_keystore.flag
+/BlocApp/BlocApp/BlocApp.Android/obj/Debug/90/app_shared_libraries
