@@ -1,0 +1,14 @@
+C:\BlocAppli\BlocAppAPI\BlocAppAPI\bin\Debug\netcoreapp2.2\BlocAppAPI.deps.json
+C:\BlocAppli\BlocAppAPI\BlocAppAPI\bin\Debug\netcoreapp2.2\BlocAppAPI.runtimeconfig.json
+C:\BlocAppli\BlocAppAPI\BlocAppAPI\bin\Debug\netcoreapp2.2\BlocAppAPI.runtimeconfig.dev.json
+C:\BlocAppli\BlocAppAPI\BlocAppAPI\bin\Debug\netcoreapp2.2\BlocAppAPI.dll
+C:\BlocAppli\BlocAppAPI\BlocAppAPI\bin\Debug\netcoreapp2.2\BlocAppAPI.pdb
+C:\BlocAppli\BlocAppAPI\BlocAppAPI\obj\Debug\netcoreapp2.2\BlocAppAPI.csprojAssemblyReference.cache
+C:\BlocAppli\BlocAppAPI\BlocAppAPI\obj\Debug\netcoreapp2.2\BlocAppAPI.csproj.CoreCompileInputs.cache
+C:\BlocAppli\BlocAppAPI\BlocAppAPI\obj\Debug\netcoreapp2.2\BlocAppAPI.RazorAssemblyInfo.cache
+C:\BlocAppli\BlocAppAPI\BlocAppAPI\obj\Debug\netcoreapp2.2\BlocAppAPI.RazorAssemblyInfo.cs
+C:\BlocAppli\BlocAppAPI\BlocAppAPI\obj\Debug\netcoreapp2.2\BlocAppAPI.AssemblyInfoInputs.cache
+C:\BlocAppli\BlocAppAPI\BlocAppAPI\obj\Debug\netcoreapp2.2\BlocAppAPI.AssemblyInfo.cs
+C:\BlocAppli\BlocAppAPI\BlocAppAPI\obj\Debug\netcoreapp2.2\BlocAppAPI.RazorTargetAssemblyInfo.cache
+C:\BlocAppli\BlocAppAPI\BlocAppAPI\obj\Debug\netcoreapp2.2\BlocAppAPI.dll
+C:\BlocAppli\BlocAppAPI\BlocAppAPI\obj\Debug\netcoreapp2.2\BlocAppAPI.pdb
