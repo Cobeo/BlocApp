@@ -11,4 +11,3 @@ C:\BlocAppli\BlocApp\BlocApp\BlocApp\obj\Debug\netstandard2.0\BlocApp.AssemblyIn
 C:\BlocAppli\BlocApp\BlocApp\BlocApp\obj\Debug\netstandard2.0\XamlC.stamp
 C:\BlocAppli\BlocApp\BlocApp\BlocApp\obj\Debug\netstandard2.0\BlocApp.dll
 C:\BlocAppli\BlocApp\BlocApp\BlocApp\obj\Debug\netstandard2.0\BlocApp.pdb
-C:\BlocAppli\BlocApp\BlocApp\BlocApp\obj\Debug\netstandard2.0\BlocApp.csprojAssemblyReference.cache
