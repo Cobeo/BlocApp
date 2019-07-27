@@ -3,12 +3,18 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             mc:Ignorable="d"
             xmlns:views="clr-namespace:BlocApp.Views"
-            x:Class="BlocApp.Views.MainPage">
+            x:Class="BlocApp.Views.MainPage"
+            SelectedTabColor="Aqua"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            BarBackgroundColor="DarkGray"
+            android:TabbedPage.BarItemColor="#66FFFFFF"
+            android:TabbedPage.BarSelectedItemColor="Orange">
 
     <TabbedPage.Children>
-        <NavigationPage Title="Add Bloc">
+        <NavigationPage Title="Add Bloc" BarBackgroundColor="Black">
             <x:Arguments>
                 <views:AddBlocPage />
             </x:Arguments>
