@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:BlocApp.ViewModels"
+             xmlns:template="clr-namespace:BlocApp.Templates"
              mc:Ignorable="d"
              x:Class="BlocApp.Views.AddBlocPage">
     <ContentPage.BindingContext>
@@ -21,14 +22,13 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="2" BackgroundColor="LightGreen">
-            <Label Text="{Binding DisplayV0}" FontSize="Medium" TextColor="LightGreen" BackgroundColor="Green" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            <StackLayout Orientation="Horizontal" Spacing="0">
-                <Button Text="-" FontSize="Medium"  TextColor="White" BackgroundColor="Green" WidthRequest="50" Command="{Binding DecreaseCommand}" CommandParameter="V0"/>
-                <Entry Text="{Binding V0}" Keyboard="Numeric" FontSize="Medium" HorizontalTextAlignment="Center" WidthRequest="75"/>
-                <Button Text="+" FontSize="Medium" TextColor="White" BackgroundColor="Green" WidthRequest="50" Command="{Binding IncreaseCommand}" CommandParameter="V0"/>
-            </StackLayout>
-        </StackLayout>
+        <template:BlocAddingTemplate 
+            BgC="LightGreen" LbTxtC="LightGreen" LbBgC="Green" BtnBgC="Green"
+            LabelTxt="{Binding DisplayV0}"
+            EntryTxt="{Binding V0}"
+            DecCommand="{Binding DecreaseCommand}" 
+            IncCommand="{Binding IncreaseCommand}"
+            ComParameter="V0"/>
 
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="2" BackgroundColor="LightGreen" Grid.Column="1">
             <Label Text="{Binding DisplayV1}" FontSize="Medium" TextColor="LightGreen" BackgroundColor="Green" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPresenter  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:BlocApp.Templates"
+             x:Class="BlocApp.Templates.BlocAddingTemplate">
+    <ContentPresenter.Resources>
+        <Style TargetType="{x:Type local:BlocAddingTemplate}">
+            <Setter Property="Content">
+                <Setter.Value>
+                    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="2" BackgroundColor="{TemplateBinding BgC}" Grid.Row="2">
+                        <Label Text="{TemplateBinding LabelTxt}" FontSize="Medium" TextColor="{TemplateBinding LbTxtC}" BackgroundColor="{TemplateBinding LbBgC}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                        <StackLayout Orientation="Horizontal" Spacing="0">
+                            <Button Text="-" FontSize="Medium"  TextColor="White" BackgroundColor="{TemplateBinding BtnBgC}" WidthRequest="50" Command="{TemplateBinding DecCommand}" CommandParameter="{Binding ComParameter}"/>
+                            <Entry Text="{TemplateBinding EntryTxt}" Keyboard="Numeric" FontSize="Medium" HorizontalTextAlignment="Center" WidthRequest="75"/>
+                            <Button Text="+" FontSize="Medium" TextColor="White" BackgroundColor="{TemplateBinding BtnBgC}" WidthRequest="50" Command="{TemplateBinding IncCommand}" CommandParameter="{Binding ComParameter}"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </ContentPresenter.Resources>
+</ContentPresenter>

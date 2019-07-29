@@ -529,3 +529,4 @@ C:\BlocAppli\BlocApp\BlocApp\BlocApp.Android\obj\Debug\90\stamp\_CopyPdbFiles.st
 C:\BlocAppli\BlocApp\BlocApp\BlocApp.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\BlocAppli\BlocApp\BlocApp\BlocApp.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\BlocAppli\BlocApp\BlocApp\BlocApp.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\BlocAppli\BlocApp\BlocApp\BlocApp.Android\bin\Debug\BlocApp.dll.mdb
