@@ -18,9 +18,7 @@ namespace BlocApp
         public void SaveAllAsync(List<Bloc> items)
         {
             foreach (var item in items)
-            {
                 SaveAsync(item);
-            }
         }
 
         public Task<int> SaveAsync(Bloc item)
@@ -29,6 +27,11 @@ namespace BlocApp
                 return _database.UpdateAsync(item);
 
             return _database.InsertAsync(item);
+        }
+
+        public Task<int> DeleteAllAsync()
+        {
+            return _database.DeleteAllAsync<Bloc>();
         }
 
         public Task<int> DeleteAsync(Bloc item)

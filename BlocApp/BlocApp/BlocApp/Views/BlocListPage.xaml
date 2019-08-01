@@ -11,10 +11,10 @@
             <DataTemplate>
                 <ViewCell>
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="{Binding Path=ID, StringFormat='ID: {0} ' }"/>
-                        <Label Text="{Binding Path=Location, StringFormat='Location: {0} ' }"/>
-                        <Label Text="{Binding Path=Vermin, StringFormat='Cotation: {0} ' }"/>
-                        <Label Text="{Binding NumberDone, StringFormat='Number Done: {0}' }"/>
+                        <Label Text="{Binding Path=ID, StringFormat='ID: {0} ' }" TextColor="White"/>
+                        <Label Text="{Binding Path=Location, StringFormat='Location: {0} ' }" TextColor="White"/>
+                        <Label Text="{Binding Path=Vermin, StringFormat='Cotation: {0} ' }" TextColor="White"/>
+                        <Label Text="{Binding NumberDone, StringFormat='Number Done: {0}' }" TextColor="White"/>
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>

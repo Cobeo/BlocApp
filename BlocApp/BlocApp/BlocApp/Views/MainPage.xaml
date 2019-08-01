@@ -7,20 +7,22 @@
             mc:Ignorable="d"
             xmlns:views="clr-namespace:BlocApp.Views"
             x:Class="BlocApp.Views.MainPage"
+            BackgroundColor="Black"
             SelectedTabColor="Aqua"
             android:TabbedPage.ToolbarPlacement="Bottom"
             BarBackgroundColor="DarkGray"
             android:TabbedPage.BarItemColor="#66FFFFFF"
-            android:TabbedPage.BarSelectedItemColor="Orange">
+            android:TabbedPage.BarSelectedItemColor="Orange"
+            Title="Bloc Application">
 
     <TabbedPage.Children>
-        <NavigationPage Title="Add Bloc" BarBackgroundColor="Black">
+        <NavigationPage Title="Add Bloc" BarBackgroundColor="Black" BarTextColor="White">
             <x:Arguments>
                 <views:AddBlocPage />
             </x:Arguments>
         </NavigationPage>
 
-        <NavigationPage Title="Bloc List">
+        <NavigationPage Title="Bloc List" BarBackgroundColor="Black" BarTextColor="White">
             <x:Arguments>
                 <views:BlocListPage />
             </x:Arguments>

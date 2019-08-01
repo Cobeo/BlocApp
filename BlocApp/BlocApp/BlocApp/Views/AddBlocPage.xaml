@@ -7,75 +7,136 @@
              xmlns:control="clr-namespace:BlocApp.Controls"
              mc:Ignorable="d"
              x:Class="BlocApp.Views.AddBlocPage">
+    
     <ContentPage.BindingContext>
         <local:AddBlocViewModel/>
     </ContentPage.BindingContext>
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-
-        
-        
-        <control:AddingBox Grid.Row="1"
-            BgC="LightGreen" LbTxtC="LightGreen" LbBgC="Green" BtnBgC="Green"
-            LabelTxt="{Binding DisplayV0}"
-            EntryTxt="{Binding V0}"
-            DecCommand="{Binding DecreaseCommand}" 
-            IncCommand="{Binding IncreaseCommand}"
-            ComParameter="V0"/>
-
-        <control:AddingBox Grid.Row="1" Grid.Column="1"
-            BgC="LightGreen" LbTxtC="LightGreen" LbBgC="Green" BtnBgC="Green"
-            LabelTxt="{Binding DisplayV1}"
-            EntryTxt="{Binding V1}"
-            DecCommand="{Binding DecreaseCommand}" 
-            IncCommand="{Binding IncreaseCommand}"
-            ComParameter="V1"/>
-
-        <control:AddingBox Grid.Row="2"
-            BgC="LightBlue" LbTxtC="LightBlue" LbBgC="Blue" BtnBgC="Blue"
-            LabelTxt="{Binding DisplayV2}"
-            EntryTxt="{Binding V2}"
-            DecCommand="{Binding DecreaseCommand}" 
-            IncCommand="{Binding IncreaseCommand}"
-            ComParameter="V2"/>
-
-        <control:AddingBox Grid.Row="2" Grid.Column="1"
-            BgC="LightBlue" LbTxtC="LightBlue" LbBgC="Blue" BtnBgC="Blue"
-            LabelTxt="{Binding DisplayV3}"
-            EntryTxt="{Binding V3}"
-            DecCommand="{Binding DecreaseCommand}" 
-            IncCommand="{Binding IncreaseCommand}"
-            ComParameter="V3"/>
-        
-        <control:AddingBox Grid.Row="3"
-            BgC="LightPink" LbTxtC="LightPink" LbBgC="Purple" BtnBgC="Purple"
-            LabelTxt="{Binding DisplayV4}"
-            EntryTxt="{Binding V4}"
-            DecCommand="{Binding DecreaseCommand}" 
-            IncCommand="{Binding IncreaseCommand}"
-            ComParameter="V4"/>
-
-        <control:AddingBox Grid.Row="3" Grid.Column="1"
-            BgC="LightPink" LbTxtC="LightPink" LbBgC="Purple" BtnBgC="Purple"
-            LabelTxt="{Binding DisplayV5}"
-            EntryTxt="{Binding V5}"
-            DecCommand="{Binding DecreaseCommand}" 
-            IncCommand="{Binding IncreaseCommand}"
-            ComParameter="V5"/>
-
-        <Button Text="Save" Grid.Row="4" Command="{Binding SaveCommand}"/>
-        <Button Text="Reset" Grid.Row="4" Grid.Column="1" Command="{Binding ResetCommand}"/>
-
-    </Grid>
     
+    <RelativeLayout Padding="0">
+        <!-- Background -->
+        <Image
+            Aspect="AspectFit"
+            Source="BlocShop.png"
+            RelativeLayout.WidthConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Height}"/>
+
+        <Grid
+            RelativeLayout.WidthConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Height}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="Location : " TextColor="White" VerticalTextAlignment="Center"/>
+                <Frame BorderColor="White" BackgroundColor="Black" HeightRequest="40" Padding="0" Margin="2">
+                    <Picker x:Name="Gender" VerticalOptions="Center" HorizontalOptions="FillAndExpand" TextColor="White" TitleColor="White" Title="BlocShop" FontSize="Small">
+                        <Picker.Items>
+                            <x:String>BlocShop</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Grid.Column="1" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Margin="2">
+                <Label Text="Français" TextColor="White" VerticalTextAlignment="Center"/>
+                <Switch IsToggled="{Binding IsVermin}" Scale="1.25" OnColor="Black"/>
+                <Label Text="Vermin" TextColor="White" VerticalTextAlignment="Center"/>
+            </StackLayout>
+
+            <control:AddingBox Grid.Row="1"
+                BgC="LightGreen" LbTxtC="LightGreen" LbBgC="Green" BtnBgC="Green"
+                LabelTxt="{Binding DisplayV0}"
+                EntryTxt="{Binding V0}"
+                DecCommand="{Binding DecreaseCommand}" 
+                IncCommand="{Binding IncreaseCommand}"
+                ComParameter="V0"/>
+
+            <control:AddingBox Grid.Row="1" Grid.Column="1"
+                BgC="LightGreen" LbTxtC="LightGreen" LbBgC="Green" BtnBgC="Green"
+                LabelTxt="{Binding DisplayV1}"
+                EntryTxt="{Binding V1}"
+                DecCommand="{Binding DecreaseCommand}" 
+                IncCommand="{Binding IncreaseCommand}"
+                ComParameter="V1"/>
+
+            <control:AddingBox Grid.Row="2"
+                BgC="LightBlue" LbTxtC="LightBlue" LbBgC="Blue" BtnBgC="Blue"
+                LabelTxt="{Binding DisplayV2}"
+                EntryTxt="{Binding V2}"
+                DecCommand="{Binding DecreaseCommand}" 
+                IncCommand="{Binding IncreaseCommand}"
+                ComParameter="V2"/>
+
+            <control:AddingBox Grid.Row="2" Grid.Column="1"
+                BgC="LightBlue" LbTxtC="LightBlue" LbBgC="Blue" BtnBgC="Blue"
+                LabelTxt="{Binding DisplayV3}"
+                EntryTxt="{Binding V3}"
+                DecCommand="{Binding DecreaseCommand}" 
+                IncCommand="{Binding IncreaseCommand}"
+                ComParameter="V3"/>
+        
+            <control:AddingBox Grid.Row="3"
+                BgC="LightPink" LbTxtC="LightPink" LbBgC="Purple" BtnBgC="Purple"
+                LabelTxt="{Binding DisplayV4}"
+                EntryTxt="{Binding V4}"
+                DecCommand="{Binding DecreaseCommand}" 
+                IncCommand="{Binding IncreaseCommand}"
+                ComParameter="V4"/>
+
+            <control:AddingBox Grid.Row="3" Grid.Column="1"
+                BgC="LightPink" LbTxtC="LightPink" LbBgC="Purple" BtnBgC="Purple"
+                LabelTxt="{Binding DisplayV5}"
+                EntryTxt="{Binding V5}"
+                DecCommand="{Binding DecreaseCommand}" 
+                IncCommand="{Binding IncreaseCommand}"
+                ComParameter="V5"/>
+
+            <control:AddingBox Grid.Row="4"
+                BgC="LightYellow" LbTxtC="LightYellow" LbBgC="#f5e400" BtnBgC="#f5e400"
+                LabelTxt="{Binding DisplayV6}"
+                EntryTxt="{Binding V6}"
+                DecCommand="{Binding DecreaseCommand}" 
+                IncCommand="{Binding IncreaseCommand}"
+                ComParameter="V6"/>
+
+            <control:AddingBox Grid.Row="4" Grid.Column="1"
+                BgC="LightYellow" LbTxtC="LightYellow" LbBgC="#f5e400" BtnBgC="#f5e400"
+                LabelTxt="{Binding DisplayV7}"
+                EntryTxt="{Binding V7}"
+                DecCommand="{Binding DecreaseCommand}" 
+                IncCommand="{Binding IncreaseCommand}"
+                ComParameter="V7"/>
+
+            <control:AddingBox Grid.Row="5"
+                BgC="LightSalmon" LbTxtC="LightSalmon" LbBgC="Red" BtnBgC="Red"
+                LabelTxt="{Binding DisplayV8}"
+                EntryTxt="{Binding V8}"
+                DecCommand="{Binding DecreaseCommand}" 
+                IncCommand="{Binding IncreaseCommand}"
+                ComParameter="V8"/>
+
+            <control:AddingBox Grid.Row="5" Grid.Column="1"
+                BgC="LightSalmon" LbTxtC="LightSalmon" LbBgC="Red" BtnBgC="Red"
+                LabelTxt="{Binding DisplayV9}"
+                EntryTxt="{Binding V9}"
+                DecCommand="{Binding DecreaseCommand}" 
+                IncCommand="{Binding IncreaseCommand}"
+                ComParameter="V9"/>
+
+            <Button Text="Save" Grid.Row="6" Command="{Binding SaveCommand}"/>
+            <Button Text="Reset" Grid.Row="6" Grid.Column="1" Command="{Binding ResetCommand}"/>
+
+        </Grid>
+    </RelativeLayout>
 </ContentPage>

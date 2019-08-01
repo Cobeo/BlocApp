@@ -22,6 +22,10 @@ namespace BlocApp
             new Cotation{ Francais = "6A", Vermin = "V3"},
             new Cotation{ Francais = "6B", Vermin = "V4"},
             new Cotation{ Francais = "6C", Vermin = "V5"},
+            new Cotation{ Francais = "7A", Vermin = "V6"},
+            new Cotation{ Francais = "7A+", Vermin = "V7"},
+            new Cotation{ Francais = "7B", Vermin = "V8"},
+            new Cotation{ Francais = "7C", Vermin = "V9"}
             };
 
             SaveAllAsync(cotations);
@@ -34,6 +38,10 @@ namespace BlocApp
             new Cotation{ID = 4, Francais = "6A", Vermin = "V3"},
             new Cotation{ID = 5, Francais = "6B", Vermin = "V4"},
             new Cotation{ID = 6, Francais = "6C", Vermin = "V5"},
+            new Cotation{ID = 7, Francais = "7A", Vermin = "V6"},
+            new Cotation{ID = 8, Francais = "7A+", Vermin = "V7"},
+            new Cotation{ID = 9, Francais = "7B", Vermin = "V8"},
+            new Cotation{ID = 10, Francais = "7C", Vermin = "V9"}
             };
 
             SaveAllAsync(cotations);
@@ -42,9 +50,7 @@ namespace BlocApp
         public void SaveAllAsync(List<Cotation> items)
         {
             foreach (var item in items)
-            {
                 SaveAsync(item);
-            }
         }
 
         public Task<int> SaveAsync(Cotation item)
@@ -53,6 +59,11 @@ namespace BlocApp
                 return _database.UpdateAsync(item);
 
             return _database.InsertAsync(item);
+        }
+
+        public Task<int> DeleteAllAsync()
+        {
+            return _database.DeleteAllAsync<Cotation>();
         }
 
         public Task<int> DeleteAsync(Cotation item)

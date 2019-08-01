@@ -26,7 +26,7 @@ namespace BlocApp.ViewModels
         #endregion Constructor
 
         #region Parameters
-
+        public string[] VerminOuFrancais { get; } = new string[] { "Vermin", "Français" };
         public bool IsVermin
         {
             get => _isVermin;
@@ -38,6 +38,15 @@ namespace BlocApp.ViewModels
                 _isVermin = value;
                 OnPropertyChanged(nameof(IsVermin));
                 OnPropertyChanged(nameof(DisplayV0));
+                OnPropertyChanged(nameof(DisplayV1));
+                OnPropertyChanged(nameof(DisplayV2));
+                OnPropertyChanged(nameof(DisplayV3));
+                OnPropertyChanged(nameof(DisplayV4));
+                OnPropertyChanged(nameof(DisplayV5));
+                OnPropertyChanged(nameof(DisplayV6));
+                OnPropertyChanged(nameof(DisplayV7));
+                OnPropertyChanged(nameof(DisplayV8));
+                OnPropertyChanged(nameof(DisplayV9));
             }
         }
         private bool _isVermin = true;
@@ -126,6 +135,62 @@ namespace BlocApp.ViewModels
         }
         private int _v5 = 0;
 
+        public int V6
+        {
+            get => _v6;
+            set
+            {
+                if (_v6 == value)
+                    return;
+
+                _v6 = value;
+                OnPropertyChanged(nameof(V6));
+            }
+        }
+        private int _v6 = 0;
+
+        public int V7
+        {
+            get => _v7;
+            set
+            {
+                if (_v7 == value)
+                    return;
+
+                _v7 = value;
+                OnPropertyChanged(nameof(V7));
+            }
+        }
+        private int _v7 = 0;
+
+        public int V8
+        {
+            get => _v8;
+            set
+            {
+                if (_v8 == value)
+                    return;
+
+                _v8 = value;
+                OnPropertyChanged(nameof(V8));
+            }
+        }
+        private int _v8 = 0;
+
+        public int V9
+        {
+            get => _v9;
+            set
+            {
+                if (_v9 == value)
+                    return;
+
+                _v9 = value;
+                OnPropertyChanged(nameof(V9));
+            }
+        }
+        private int _v9 = 0;
+
         public string DisplayV0
         {
             get
@@ -178,6 +243,42 @@ namespace BlocApp.ViewModels
                 if (IsVermin)
                     return App.CotationDB.GetAsync(6).Result.Vermin;
                 return App.CotationDB.GetAsync(6).Result.Francais;
+            }
+        }
+        public string DisplayV6
+        {
+            get
+            {
+                if (IsVermin)
+                    return App.CotationDB.GetAsync(7).Result.Vermin;
+                return App.CotationDB.GetAsync(7).Result.Francais;
+            }
+        }
+        public string DisplayV7
+        {
+            get
+            {
+                if (IsVermin)
+                    return App.CotationDB.GetAsync(8).Result.Vermin;
+                return App.CotationDB.GetAsync(8).Result.Francais;
+            }
+        }
+        public string DisplayV8
+        {
+            get
+            {
+                if (IsVermin)
+                    return App.CotationDB.GetAsync(9).Result.Vermin;
+                return App.CotationDB.GetAsync(9).Result.Francais;
+            }
+        }
+        public string DisplayV9
+        {
+            get
+            {
+                if (IsVermin)
+                    return App.CotationDB.GetAsync(10).Result.Vermin;
+                return App.CotationDB.GetAsync(10).Result.Francais;
             }
         }
 
@@ -267,12 +368,64 @@ namespace BlocApp.ViewModels
                 V5 = 0;
             }
 
+            if (V6 != 0)
+            {
+                newBlocs.Add(new Models.Bloc()
+                {
+                    AcheivedDate = DateTime.Now,
+                    IDCotation = 7,
+                    Location = "BlocShop",
+                    NumberDone = V6,
+                    NumberFlashed = 0
+                });
+                V6 = 0;
+            }
+
+            if (V7 != 0)
+            {
+                newBlocs.Add(new Models.Bloc()
+                {
+                    AcheivedDate = DateTime.Now,
+                    IDCotation = 8,
+                    Location = "BlocShop",
+                    NumberDone = V7,
+                    NumberFlashed = 0
+                });
+                V7 = 0;
+            }
+
+            if (V8 != 0)
+            {
+                newBlocs.Add(new Models.Bloc()
+                {
+                    AcheivedDate = DateTime.Now,
+                    IDCotation = 9,
+                    Location = "BlocShop",
+                    NumberDone = V8,
+                    NumberFlashed = 0
+                });
+                V8 = 0;
+            }
+
+            if (V9 != 0)
+            {
+                newBlocs.Add(new Models.Bloc()
+                {
+                    AcheivedDate = DateTime.Now,
+                    IDCotation = 10,
+                    Location = "BlocShop",
+                    NumberDone = V9,
+                    NumberFlashed = 0
+                });
+                V9 = 0;
+            }
+
             if (newBlocs.Any())
                 App.BlocDB.SaveAllAsync(newBlocs);
         }
 
         public ICommand ResetCommand { get; }
-        public void _resetCommand() { V0 = 0; V1 = 0; V2 = 0; V3 = 0; V4 = 0; V5 = 0; }
+        public void _resetCommand() { App.BlocDB.DeleteAllAsync(); }
         
         public ICommand IncreaseCommand { get; }
         private void _increase(string cot)
@@ -296,6 +449,18 @@ namespace BlocApp.ViewModels
                     break;
                 case "V5":
                     V5++;
+                    break;
+                case "V6":
+                    V6++;
+                    break;
+                case "V7":
+                    V7++;
+                    break;
+                case "V8":
+                    V8++;
+                    break;
+                case "V9":
+                    V9++;
                     break;
                 default:
                     break;
@@ -325,11 +490,42 @@ namespace BlocApp.ViewModels
                 case "V5":
                     if (V5 > 0) V5--;
                     break;
+                case "V6":
+                    if (V6 > 0) V6--;
+                    break;
+                case "V7":
+                    if (V7 > 0) V7--;
+                    break;
+                case "V8":
+                    if (V8 > 0) V8--;
+                    break;
+                case "V9":
+                    if (V9 > 0) V9--;
+                    break;
                 default:
                     break;
             }
         }
 
+        public string IsVerminSelected
+        {
+            set
+            {
+                switch (value)
+                {
+                    case "Vermin":
+                        IsVermin = true;
+                        break;
+                    case "Français":
+                        IsVermin = false;
+                        break;
+                    default:
+                        break;
+                }
+
+                OnPropertyChanged(nameof(IsVerminSelected));
+            }
+        }
         #endregion Command
     }
 }

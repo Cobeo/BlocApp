@@ -8,6 +8,7 @@ namespace BlocApp
     {
         void SaveAllAsync(List<T> items);
         Task<int> SaveAsync(T item);
+        Task<int> DeleteAllAsync();
         Task<int> DeleteAsync(T item);
         Task<List<T>> GetAllAsync(bool forceRefresh = false);
         Task<T> GetAsync(int id);
