@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:BlocApp.ViewModels"
-             xmlns:template="clr-namespace:BlocApp.Templates"
+             xmlns:control="clr-namespace:BlocApp.Controls"
              mc:Ignorable="d"
              x:Class="BlocApp.Views.AddBlocPage">
     <ContentPage.BindingContext>
@@ -16,13 +16,16 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <template:BlocAddingTemplate 
+        
+        
+        <control:AddingBox Grid.Row="1"
             BgC="LightGreen" LbTxtC="LightGreen" LbBgC="Green" BtnBgC="Green"
             LabelTxt="{Binding DisplayV0}"
             EntryTxt="{Binding V0}"
@@ -30,53 +33,48 @@
             IncCommand="{Binding IncreaseCommand}"
             ComParameter="V0"/>
 
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="2" BackgroundColor="LightGreen" Grid.Column="1">
-            <Label Text="{Binding DisplayV1}" FontSize="Medium" TextColor="LightGreen" BackgroundColor="Green" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            <StackLayout Orientation="Horizontal" Spacing="0">
-                <Button Text="-" FontSize="Medium"  TextColor="White" BackgroundColor="Green" WidthRequest="50" Command="{Binding DecreaseCommand}" CommandParameter="V1"/>
-                <Entry Text="{Binding V1}" Keyboard="Numeric" FontSize="Medium" HorizontalTextAlignment="Center" WidthRequest="75"/>
-                <Button Text="+" FontSize="Medium" TextColor="White" BackgroundColor="Green" WidthRequest="50" Command="{Binding IncreaseCommand}" CommandParameter="V1"/>
-            </StackLayout>
-        </StackLayout>
+        <control:AddingBox Grid.Row="1" Grid.Column="1"
+            BgC="LightGreen" LbTxtC="LightGreen" LbBgC="Green" BtnBgC="Green"
+            LabelTxt="{Binding DisplayV1}"
+            EntryTxt="{Binding V1}"
+            DecCommand="{Binding DecreaseCommand}" 
+            IncCommand="{Binding IncreaseCommand}"
+            ComParameter="V1"/>
 
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="2" BackgroundColor="LightBlue" Grid.Row="1">
-            <Label Text="{Binding DisplayV2}" FontSize="Medium" TextColor="LightBlue" BackgroundColor="Blue" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            <StackLayout Orientation="Horizontal" Spacing="0">
-                <Button Text="-" FontSize="Medium"  TextColor="White" BackgroundColor="Blue" WidthRequest="50" Command="{Binding DecreaseCommand}" CommandParameter="V2"/>
-                <Entry Text="{Binding V2}" Keyboard="Numeric" FontSize="Medium" HorizontalTextAlignment="Center" WidthRequest="75"/>
-                <Button Text="+" FontSize="Medium" TextColor="White" BackgroundColor="Blue" WidthRequest="50" Command="{Binding IncreaseCommand}" CommandParameter="V2"/>
-            </StackLayout>
-        </StackLayout>
+        <control:AddingBox Grid.Row="2"
+            BgC="LightBlue" LbTxtC="LightBlue" LbBgC="Blue" BtnBgC="Blue"
+            LabelTxt="{Binding DisplayV2}"
+            EntryTxt="{Binding V2}"
+            DecCommand="{Binding DecreaseCommand}" 
+            IncCommand="{Binding IncreaseCommand}"
+            ComParameter="V2"/>
 
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="2" BackgroundColor="LightBlue" Grid.Row="1" Grid.Column="1">
-            <Label Text="{Binding DisplayV3}" FontSize="Medium" TextColor="LightBlue" BackgroundColor="Blue" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            <StackLayout Orientation="Horizontal" Spacing="0">
-                <Button Text="-" FontSize="Medium"  TextColor="White" BackgroundColor="Blue" WidthRequest="50" Command="{Binding DecreaseCommand}" CommandParameter="V3"/>
-                <Entry Text="{Binding V3}" Keyboard="Numeric" FontSize="Medium" HorizontalTextAlignment="Center" WidthRequest="75"/>
-                <Button Text="+" FontSize="Medium" TextColor="White" BackgroundColor="Blue" WidthRequest="50" Command="{Binding IncreaseCommand}" CommandParameter="V3"/>
-            </StackLayout>
-        </StackLayout>
+        <control:AddingBox Grid.Row="2" Grid.Column="1"
+            BgC="LightBlue" LbTxtC="LightBlue" LbBgC="Blue" BtnBgC="Blue"
+            LabelTxt="{Binding DisplayV3}"
+            EntryTxt="{Binding V3}"
+            DecCommand="{Binding DecreaseCommand}" 
+            IncCommand="{Binding IncreaseCommand}"
+            ComParameter="V3"/>
+        
+        <control:AddingBox Grid.Row="3"
+            BgC="LightPink" LbTxtC="LightPink" LbBgC="Purple" BtnBgC="Purple"
+            LabelTxt="{Binding DisplayV4}"
+            EntryTxt="{Binding V4}"
+            DecCommand="{Binding DecreaseCommand}" 
+            IncCommand="{Binding IncreaseCommand}"
+            ComParameter="V4"/>
 
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="2" BackgroundColor="LightPink" Grid.Row="2">
-            <Label Text="{Binding DisplayV4}" FontSize="Medium" TextColor="LightPink" BackgroundColor="Purple" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            <StackLayout Orientation="Horizontal" Spacing="0">
-                <Button Text="-" FontSize="Medium"  TextColor="White" BackgroundColor="Purple" WidthRequest="50" Command="{Binding DecreaseCommand}" CommandParameter="V4"/>
-                <Entry Text="{Binding V4}" Keyboard="Numeric" FontSize="Medium" HorizontalTextAlignment="Center" WidthRequest="75"/>
-                <Button Text="+" FontSize="Medium" TextColor="White" BackgroundColor="Purple" WidthRequest="50" Command="{Binding IncreaseCommand}" CommandParameter="V4"/>
-            </StackLayout>
-        </StackLayout>
+        <control:AddingBox Grid.Row="3" Grid.Column="1"
+            BgC="LightPink" LbTxtC="LightPink" LbBgC="Purple" BtnBgC="Purple"
+            LabelTxt="{Binding DisplayV5}"
+            EntryTxt="{Binding V5}"
+            DecCommand="{Binding DecreaseCommand}" 
+            IncCommand="{Binding IncreaseCommand}"
+            ComParameter="V5"/>
 
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="2" BackgroundColor="LightPink" Grid.Row="2" Grid.Column="1">
-            <Label Text="{Binding DisplayV5}" FontSize="Medium" TextColor="LightPink" BackgroundColor="Purple" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            <StackLayout Orientation="Horizontal" Spacing="0">
-                <Button Text="-" FontSize="Medium"  TextColor="White" BackgroundColor="Purple" WidthRequest="50" Command="{Binding DecreaseCommand}" CommandParameter="V5"/>
-                <Entry Text="{Binding V5}" Keyboard="Numeric" FontSize="Medium" HorizontalTextAlignment="Center" WidthRequest="75"/>
-                <Button Text="+" FontSize="Medium" TextColor="White" BackgroundColor="Purple" WidthRequest="50" Command="{Binding IncreaseCommand}" CommandParameter="V5"/>
-            </StackLayout>
-        </StackLayout>
-
-        <Button Text="Save" Grid.Row="3" Command="{Binding SaveCommand}"/>
-        <Button Text="Reset" Grid.Row="3" Grid.Column="1" Command="{Binding ResetCommand}"/>
+        <Button Text="Save" Grid.Row="4" Command="{Binding SaveCommand}"/>
+        <Button Text="Reset" Grid.Row="4" Grid.Column="1" Command="{Binding ResetCommand}"/>
 
     </Grid>
     

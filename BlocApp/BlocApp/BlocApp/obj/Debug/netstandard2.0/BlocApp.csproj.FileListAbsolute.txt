@@ -12,4 +12,5 @@ C:\BlocAppli\BlocApp\BlocApp\BlocApp\obj\Debug\netstandard2.0\XamlC.stamp
 C:\BlocAppli\BlocApp\BlocApp\BlocApp\obj\Debug\netstandard2.0\BlocApp.dll
 C:\BlocAppli\BlocApp\BlocApp\BlocApp\obj\Debug\netstandard2.0\BlocApp.pdb
 C:\BlocAppli\BlocApp\BlocApp\BlocApp\obj\Debug\netstandard2.0\BlocApp.csprojAssemblyReference.cache
-C:\BlocAppli\BlocApp\BlocApp\BlocApp\obj\Debug\netstandard2.0\Templates\BlocAddingTemplate.xaml.g.cs
+C:\BlocAppli\BlocApp\BlocApp\BlocApp\obj\Debug\netstandard2.0\Controls\AddingBox.xaml.g.cs
+C:\BlocAppli\BlocApp\BlocApp\BlocApp\obj\Debug\netstandard2.0\Controls\BlocAddingTemplate.xaml.g.cs
