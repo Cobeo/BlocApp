@@ -1,0 +1,16 @@
+C:\BlocAppli\BlocApp\BlocApp\BlocApp\bin\Debug\netstandard2.0\BlocApp.deps.json
+C:\BlocAppli\BlocApp\BlocApp\BlocApp\bin\Debug\netstandard2.0\BlocApp.dll
+C:\BlocAppli\BlocApp\BlocApp\BlocApp\bin\Debug\netstandard2.0\BlocApp.pdb
+C:\BlocAppli\BlocApp\BlocApp\BlocApp\obj\Debug\netstandard2.0\BlocApp.csprojAssemblyReference.cache
+C:\BlocAppli\BlocApp\BlocApp\BlocApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\BlocAppli\BlocApp\BlocApp\BlocApp\obj\Debug\netstandard2.0\Controls\AddingBox.xaml.g.cs
+C:\BlocAppli\BlocApp\BlocApp\BlocApp\obj\Debug\netstandard2.0\Controls\BlocAddingTemplate.xaml.g.cs
+C:\BlocAppli\BlocApp\BlocApp\BlocApp\obj\Debug\netstandard2.0\Views\AddBlocPage.xaml.g.cs
+C:\BlocAppli\BlocApp\BlocApp\BlocApp\obj\Debug\netstandard2.0\Views\BlocListPage.xaml.g.cs
+C:\BlocAppli\BlocApp\BlocApp\BlocApp\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\BlocAppli\BlocApp\BlocApp\BlocApp\obj\Debug\netstandard2.0\BlocApp.csproj.CoreCompileInputs.cache
+C:\BlocAppli\BlocApp\BlocApp\BlocApp\obj\Debug\netstandard2.0\BlocApp.AssemblyInfoInputs.cache
+C:\BlocAppli\BlocApp\BlocApp\BlocApp\obj\Debug\netstandard2.0\BlocApp.AssemblyInfo.cs
+C:\BlocAppli\BlocApp\BlocApp\BlocApp\obj\Debug\netstandard2.0\XamlC.stamp
+C:\BlocAppli\BlocApp\BlocApp\BlocApp\obj\Debug\netstandard2.0\BlocApp.dll
+C:\BlocAppli\BlocApp\BlocApp\BlocApp\obj\Debug\netstandard2.0\BlocApp.pdb

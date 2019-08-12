@@ -3,21 +3,55 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:BlocApp.ViewModels"
              mc:Ignorable="d"
              x:Class="BlocApp.Views.BlocListPage">
+    <ContentPage.BindingContext>
+        <local:BlocListViewModel/>
+    </ContentPage.BindingContext>
     
-    <ListView x:Name="BlocListView">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="{Binding Path=ID, StringFormat='ID: {0} ' }" TextColor="White"/>
-                        <Label Text="{Binding Path=Location, StringFormat='Location: {0} ' }" TextColor="White"/>
-                        <Label Text="{Binding Path=Vermin, StringFormat='Cotation: {0} ' }" TextColor="White"/>
-                        <Label Text="{Binding NumberDone, StringFormat='Number Done: {0}' }" TextColor="White"/>
-                    </StackLayout>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <ControlTemplate x:Key="BlocList">
+                <StackLayout>
+                    <Label Text="{TemplateBinding Path=Place , StringFormat='allo {}'}" TextColor="White"/>
+
+                </StackLayout>
+            </ControlTemplate>
+            <ControlTemplate x:Key="BlocCalendar">
+                <Label Text="Calendrier" TextColor="Green"/>
+            </ControlTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="Location : " TextColor="White" VerticalTextAlignment="Center"/>
+            <Frame BorderColor="White" BackgroundColor="Black" HeightRequest="40" Padding="0" Margin="2">
+                <Picker x:Name="Gender" VerticalOptions="Center" HorizontalOptions="FillAndExpand" TextColor="White" TitleColor="White" Title="BlocShop" FontSize="Small">
+                    <Picker.Items>
+                        <x:String>BlocShop</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Frame>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Spacing="0" Grid.Column="1">
+            <Button Text="lst" Clicked="ButtonListView_Clicked"/>
+            <Button Text="calnd" Clicked="ButtonCalendarView_Clicked"/>
+        </StackLayout>
+
+        <ContentView x:Name="CtrlTmplate" Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" ControlTemplate="{StaticResource BlocList}"/>
+
+    </Grid>
 </ContentPage>
