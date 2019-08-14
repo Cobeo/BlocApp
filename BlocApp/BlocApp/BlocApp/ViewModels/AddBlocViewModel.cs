@@ -421,11 +421,19 @@ namespace BlocApp.ViewModels
             }
 
             if (newBlocs.Any())
+            {
                 App.BlocDB.SaveAllAsync(newBlocs);
+                OnPropertyChanged(nameof(App.BlocDB));
+                App.IsDBModified = true;
+            }
         }
 
         public ICommand ResetCommand { get; }
-        public void _resetCommand() { App.BlocDB.DeleteAllAsync(); }
+        public void _resetCommand()
+        {
+            App.BlocDB.DeleteAllAsync();
+            App.IsDBModified = true;
+        }
         
         public ICommand IncreaseCommand { get; }
         private void _increase(string cot)

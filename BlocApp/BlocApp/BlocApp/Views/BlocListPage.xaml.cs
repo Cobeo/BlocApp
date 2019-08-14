@@ -15,13 +15,18 @@ namespace BlocApp.Views
         public BlocListPage()
         {
             InitializeComponent();
-            //BlocListView.ItemsSource = App.BlocDB.GetAllAsync().Result;
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            //BlocListView.ItemsSource = App.BlocDB.GetAllAsync().Result;
+
+            if (App.IsDBModified)
+            {
+                //((ListView)((Grid)CtrlTmplate.Children[0]).Children[4]).BeginRefresh();
+
+                App.IsDBModified = false;
+            }
         }
 
         private void ButtonListView_Clicked(object sender, EventArgs e)

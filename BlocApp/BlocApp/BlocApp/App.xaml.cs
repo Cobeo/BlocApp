@@ -8,6 +8,7 @@ namespace BlocApp
     public partial class App : Application
     {
         #region DB
+        public static bool IsDBModified = false;
         private static CotationDatabase _cotationDB;
         private static BlocDatabase _blocDB;
 

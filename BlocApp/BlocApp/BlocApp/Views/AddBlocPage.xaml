@@ -11,8 +11,8 @@
     <ContentPage.BindingContext>
         <local:AddBlocViewModel/>
     </ContentPage.BindingContext>
-    
-    <RelativeLayout Padding="0">
+
+    <RelativeLayout Padding="0" Margin="10,0">
         <!-- Background -->
         <Image
             Aspect="AspectFit"
