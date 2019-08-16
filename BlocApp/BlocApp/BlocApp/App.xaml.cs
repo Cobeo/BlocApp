@@ -2,6 +2,10 @@
 using Xamarin.Forms;
 using BlocApp.Views;
 using System.IO;
+using System.Collections.ObjectModel;
+using static BlocApp.ViewModels.BlocListViewModel;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace BlocApp
 {
@@ -35,6 +39,7 @@ namespace BlocApp
             }
         }
         #endregion DB
+
 
         public App()
         {

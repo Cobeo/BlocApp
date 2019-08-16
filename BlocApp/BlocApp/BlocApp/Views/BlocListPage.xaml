@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:BlocApp.ViewModels"
+             xmlns:view="clr-namespace:BlocApp.Views"
              mc:Ignorable="d"
              x:Class="BlocApp.Views.BlocListPage">
     <ContentPage.BindingContext>
@@ -34,7 +35,7 @@
                     
                     <BoxView HeightRequest="1" Color="White" BackgroundColor="White" Grid.Row="1" Grid.ColumnSpan="3"/>
 
-                    <ListView Grid.Row="2" Grid.ColumnSpan="3" ItemsSource="{Binding Path=nombreVoie}">
+                    <ListView Grid.Row="2" Grid.ColumnSpan="3" ItemsSource="{Binding Path=NombreVoies}" RefreshCommand="{Binding Path=RefreshNombreVoies}">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
@@ -56,7 +57,7 @@
                 </Grid>
             </ControlTemplate>
             <ControlTemplate x:Key="BlocCalendar">
-                <Label Text="Calendrier" TextColor="Green"/>
+                <view:CalendarView/>
             </ControlTemplate>
         </ResourceDictionary>
     </ContentPage.Resources>

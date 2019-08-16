@@ -5,6 +5,7 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using System.Linq;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 
 namespace BlocApp.ViewModels
 {
@@ -14,18 +15,25 @@ namespace BlocApp.ViewModels
 
         public BlocListViewModel()
         {
+            RefreshNombreVoies = new Command(_refreshNombreVoies);
+
+            _refreshNombreVoies();
         }
 
         #endregion Constructor
 
         #region Parameters
         public string Place { get; } = "BlocShop";
-        public ObservableCollection<NombreVoie> nombreVoie
-        { 
-            get
-            {
-                List<Models.Bloc> tmpBloc = App.BlocDB.GetAllAsync().Result;
-                return new ObservableCollection<NombreVoie>
+        public ObservableCollection<NombreVoie> NombreVoies { get; set; }
+        #endregion Parameters
+
+        #region Methodes
+
+        public ICommand RefreshNombreVoies { get; }
+        private void _refreshNombreVoies()
+        {
+            List<Models.Bloc> tmpBloc = App.BlocDB.GetAllAsync().Result;
+            NombreVoies = new ObservableCollection<NombreVoie>
                 {
                     new NombreVoie
                     {
@@ -94,9 +102,10 @@ namespace BlocApp.ViewModels
                         Flash = tmpBloc.Where(x => x.IDCotation == 10).Select(n => n.NumberFlashed).Sum()
                     }
                 };
-            }
+            OnPropertyChanged(nameof(NombreVoies));
         }
-        #endregion Parameters
+
+        #endregion Methodes
 
         #region Command
 

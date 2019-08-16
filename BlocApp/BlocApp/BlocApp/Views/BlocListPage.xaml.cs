@@ -17,14 +17,19 @@ namespace BlocApp.Views
             InitializeComponent();
         }
 
-        protected override void OnAppearing()
+        protected override  void OnAppearing()
         {
             base.OnAppearing();
+            
+            RefreshList();
+        }
 
+        private void RefreshList()
+        {
             if (App.IsDBModified)
             {
-                //((ListView)((Grid)CtrlTmplate.Children[0]).Children[4]).BeginRefresh();
-
+                ((ListView)((Grid)CtrlTmplate.Children[0]).Children[4]).BeginRefresh();
+                ((ListView)((Grid)CtrlTmplate.Children[0]).Children[4]).EndRefresh();
                 App.IsDBModified = false;
             }
         }

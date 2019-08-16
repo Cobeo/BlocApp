@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Grid xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BlocApp.Views.CalendarView">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Frame BorderColor="White" BackgroundColor="Transparent" Grid.ColumnSpan="7">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Month" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.ColumnSpan="2"/>
+                <Label Text="Year" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Column="2"/>
+            </Grid>
+        </Frame>
+
+        <Frame BorderColor="White" BackgroundColor="Transparent" Grid.Row="1">
+            <Button BackgroundColor="Transparent">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Style.Triggers>
+                            <DataTrigger TargetType="{x:Type Button}" Binding="{Binding Path=istrue}" Value="True">
+                                <Setter>
+                                    <Frame BorderColor="White" CornerRadius="90" HorizontalOptions="Fill" VerticalOptions="Fill">
+                                        <Label Text="1" TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                                    </Frame>
+                                </Setter>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </Frame>
+
+    </Grid>
+</Grid>

@@ -423,7 +423,6 @@ namespace BlocApp.ViewModels
             if (newBlocs.Any())
             {
                 App.BlocDB.SaveAllAsync(newBlocs);
-                OnPropertyChanged(nameof(App.BlocDB));
                 App.IsDBModified = true;
             }
         }

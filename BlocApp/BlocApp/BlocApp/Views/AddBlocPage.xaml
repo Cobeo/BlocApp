@@ -6,7 +6,8 @@
              xmlns:local="clr-namespace:BlocApp.ViewModels"
              xmlns:control="clr-namespace:BlocApp.Controls"
              mc:Ignorable="d"
-             x:Class="BlocApp.Views.AddBlocPage">
+             x:Class="BlocApp.Views.AddBlocPage"
+             x:Name="addBlocView">
     
     <ContentPage.BindingContext>
         <local:AddBlocViewModel/>

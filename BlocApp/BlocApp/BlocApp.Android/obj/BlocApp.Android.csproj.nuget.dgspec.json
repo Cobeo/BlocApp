@@ -76,7 +76,7 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.1.0.618606, )"
+              "version": "[4.1.0.673156, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",
@@ -137,7 +137,7 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.1.0.618606, )"
+              "version": "[4.1.0.673156, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",
